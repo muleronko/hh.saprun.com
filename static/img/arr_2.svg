@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="168px" height="28px" viewBox="0 0 168 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>arr_2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="template" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="page" transform="translate(-906.000000, -6179.000000)" stroke="#CCCCCC" stroke-width="0.5">
+            <g id="needs" transform="translate(0.000000, 5838.000000)">
+                <g id="content" transform="translate(405.000000, 215.000000)">
+                    <g id="arrow" transform="translate(176.000000, 0.000000)">
+                        <path d="M325,126.882812 C325,126.882812 409.621094,186.242188 492.398438,126.882812" id="arr_2"></path>
+                        <path id="arr_2-decoration-1" d="M492.398438,126.882812 L481.873551,130.738557 L485.37005,135.614466 L492.398438,126.882812 Z"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

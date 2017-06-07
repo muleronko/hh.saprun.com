@@ -1,0 +1,130 @@
+/* --- FONTS RENDER --------------------------------------------------------
+---------------------------------------------------------------------------- */
+
+// TTF
+@font-face {
+	font-family: ProximaR;
+	src: url(../fonts/PrR.otf);
+}
+
+@font-face {
+	font-family: ProximaR;
+	src: url(../fonts/PrR.eot);
+}
+
+@font-face {
+	font-family: ProximaR;
+	src: url(../fonts/PrR.woff);
+}
+
+@font-face {
+	font-family: ProximaB;
+	src: url(../fonts/PrB.otf);
+}
+
+@font-face {
+	font-family: ProximaB;
+	src: url(../fonts/PrB.eot);
+}
+
+@font-face {
+	font-family: ProximaB;
+	src: url(../fonts/PrB.woff);
+}
+
+@font-face {
+	font-family: RalewayL;
+	src: url(../fonts/RlL.otf);
+}
+
+@font-face {
+	font-family: RalewayL;
+	src: url(../fonts/RlL.eot);
+}
+
+@font-face {
+	font-family: RalewayL;
+	src: url(../fonts/RlL.woff);
+}
+
+@font-face {
+	font-family: RalewayB;
+	src: url(../fonts/RlB.otf);
+}
+
+@font-face {
+	font-family: RalewayB;
+	src: url(../fonts/RlB.eot);
+}
+
+@font-face {
+	font-family: RalewayB;
+	src: url(../fonts/RlB.woff);
+}
+
+/* --- COLOR CLASSES -------------------------------------------------------
+---------------------------------------------------------------------------- */
+
+@deepyellow: #E6E68A;
+@deepgreen: #59B359;
+@deepblue: #478FB3;
+@darkblue: #202426;
+@deepgray: #999;
+@green: #45E695;
+@blue: #55BEF3;
+@red: #CC0000;
+@white: #fff;
+@black: #000;
+@gray: #ccc;
+
+/* --- MAIN SETTINGS -------------------------------------------------------
+---------------------------------------------------------------------------- */
+
+html, body {
+	font: normal 16px/20px ProximaR, sans-serif;
+	padding: 0 !important;
+	letter-spacing: .5px;
+	margin: 0 !important;
+	height: 100%;
+	width: 100%;
+}
+
+a:link, a:active, a:visited, a:hover {
+	border: none !important;
+}
+
+* {
+	box-sizing: border-box !important;
+}
+
+.clear:after {
+	display: table;
+	content: "";
+	clear: both;
+	*zoom: 1;
+}
+
+.transition {
+	-webkit-transition: background .2s ease-in-out;
+	-moz-transition: background .2s ease-in-out;
+	-o-transition: background .2s ease-in-out;
+	transition: background .2s ease-in-out;
+}
+
+.transition-all {
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+}
+
+h3 {
+	font: normal 40px/48px RalewayL, sans-serif;
+	letter-spacing: .5px;
+	display: block;
+	color: @black;
+
+	span.black {
+		font-family: RalewayB;
+	}
+}
