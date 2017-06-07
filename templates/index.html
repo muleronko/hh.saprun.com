@@ -12,7 +12,12 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <title>HyperHive – инновационная мобильная платформа</title>
-    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>
+       function onSubmit(token) {
+         document.getElementById("demo-form").submit();
+       }
+     </script>
 </head>
 <body>
     <header>
@@ -595,11 +600,11 @@
     </div>
     <div id="hidden-content-1" class="hidden_block">
     	<h3>Войти в HyperHive</h3>
-    	<form action="/request/email/" method="post">
+    	<form action="/request/email/" method="post" id='demo-form'>
     		<input type="text" name="name" placeholder="Ваше имя">
     		<input type="text" name="email" placeholder="Email">
     		<input type="hidden" name="source" value="Войти в HyperHive">
-    		<button type="submit" class="btn g-recaptcha" data-sitekey="6LcX8RwUAAAAAKWdUszlFdg4pKjZVvQeR0e4dilL" data-callback="YourOnSubmitFn">Отправить заявку</button>
+    		<button class="btn g-recaptcha" data-sitekey="6LeogSQUAAAAAB4lW6uwNuC28hcU6jdQsVF78Uvw" data-callback="onSubmit">Отправить заявку</button>
     	</form>
     </div>
     <div id="hidden-content-2" class="hidden_block">
