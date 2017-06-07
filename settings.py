@@ -15,3 +15,7 @@ class Config(object):
 
     MAIL_SUBJECT = 'HH request'
     MAIL_RECIPIENTS = ['maksim.glebov@saprun.com']
+
+    RECAPTCHA_SITE_KEY = '6LcX8RwUAAAAAKWdUszlFdg4pKjZVvQeR0e4dilL'
+    RECAPTCHA_SECRET_KEY = '6LcX8RwUAAAAAFLucI5XDz9QqKp0QaXp3tG8MiO6'
+    RECAPTCHA_ENABLED = True

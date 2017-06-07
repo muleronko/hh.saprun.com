@@ -4,8 +4,10 @@ import sys
 import logging
 from logging.handlers import RotatingFileHandler
 
-from flask import Flask, render_template, send_from_directory, request, redirect, url_for
+from flask import Flask, render_template, send_from_directory, request, redirect, url_for, jsonify
 from flask_mail import Mail, Message
+from flask_recaptcha import ReCaptcha
+
 
 app = Flask(__name__)
 app.config.from_object('settings.Config')
@@ -17,6 +19,9 @@ app.logger.addHandler(handler)
 
 mail = Mail()
 mail.init_app(app)
+
+recaptcha = ReCaptcha()
+recaptcha.init_app(app)
 
 
 @app.route('/', methods=['GET'])
@@ -31,6 +36,12 @@ def send_js(path):
 
 @app.route('/request/email/', methods=['POST'])
 def by_email():
+    if not recaptcha.verify():
+        response = jsonify({
+            'message': 'Sorry, but you are robot. Call some human to pass through.'
+        })
+        response.status_code = 403
+        return response
     name = request.form.get('name', '')
     email = request.form.get('email')
     send_message(app.config.get('EMAIL_REQUEST_TEMPLATE').decode('utf-8') % locals())
@@ -39,6 +50,12 @@ def by_email():
 
 @app.route('/request/phone/', methods=['POST'])
 def by_phone():
+    if not recaptcha.verify():
+        response = jsonify({
+            'message': 'Sorry, but you are robot. Call some human to pass through.'
+        })
+        response.status_code = 403
+        return response
     name = request.form.get('name')
     phone = request.form.get('phone')
     send_message(app.config.get('PHONE_REQUEST_TEMPLATE').decode('utf-8') % locals())
