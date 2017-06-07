@@ -648,6 +648,13 @@ section.belt-types {
 				}
 			}
 		}
+		ul.check-list {
+			display: none;
+			height: 130px;
+		}
+		ul.check-list.active {
+			display: block;
+		}
 	}
 }
 
@@ -1774,7 +1781,8 @@ section.belt-review {
 	//background: lighten(@gray, 17%);
 	background: @white;
 	margin: 0 0 400px 0;
-	display: block;
+	//display: block;
+	display: none;
 	width: 100%;
 	padding: 0;
 	border: none;
