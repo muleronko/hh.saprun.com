@@ -68,10 +68,8 @@
         </div>
         <div class="subscribe">
             <p>Получите подробную информацию по<br>платформе <span class="bold">HyperHive</span> на свой e-mail</p>
-            <form action="/request/email/" method="post">
-				<input type="text" name="email" placeholder="Ваш e-mail…">
-				<button type="submit">Свяжитесь с нами</button>
-            </form>
+            <input class="name_form" id="form11" type="text" name="email" placeholder="Ваш e-mail…">
+			<button type="submit" onclick="copyMail()" data-fancybox data-src="#hidden-content">Свяжитесь с нами</button>
         </div>
     </section>
     <div class="clear"></div>
@@ -156,7 +154,7 @@
     <div class="clear"></div>
     <section class="belt-business">
         <div class="wrapper">
-            <div class="phone-promo"></div>
+            <div class="phone-promo" id="parallax-bg1"></div>
             <h3>Экономические выгоды и <span class="black">функциональные особенности</span></h3>
             <p><span class="bold">Адаптированный подход</span> к созданию мобильных приложений на основе собственного опыта и лучших мировых практик<br><br><span class="bold">Унификация</span> средств разработки и подходов к выпуску приложений:<br>–   native applications<br>–   web applications<br>–   cross-platform applications<br><br>Высокая степень <span class="bold">автоматизации процесса</span> разработки и тестирования<br><br><span class="bold">Снижение</span> временных и материальных затрат на разработку мобильных приложений</p>
             <p><span class="bold">Сокращение времени</span>, затрачиваемого персоналом на выполнение бизнес-процессов<br><br><span class="bold">Аутентификация</span> и <span class="bold">авторизация</span> мобильного пользователя в корпоративных системах<br><br><span class="bold">Снижение нагрузки</span> на бизнес-системы за счёт кеширования данных на мобильном устройстве<br><br>Оперативная <span class="bold">техническая поддержка</span> IT-специалистов в рабочее время<br><br><span class="bold">Отчёты</span>, аудит и логирование поведения системы и действий пользователей</p>
@@ -559,7 +557,7 @@
     <div class="clear"></div>
     <section class="belt-more">
         <div class="wrapper">
-            <p class="more">Остались вопросы? <a href="./#.html" title="Обратная связь" target="_self" data-fancybox data-src="#hidden-content">Напишите нам</a></p>
+            <p class="more">Остались вопросы? <a href="mailto:hhive@saprun.com" title="Обратная связь" target="_self">Напишите нам</a></p>
         </div>
     </section>
     <div class="clear"></div>
@@ -567,10 +565,8 @@
         <div class="wrapper">
             <div class="subscribe">
                 <p>Будьте в курсе обновлений платформы <span class="bold">HyperHive</span></p>
-                <form action="/request/email/" method="post">
-					<input type="text" name="email" placeholder="Ваш e-mail…">
-					<button type="submit">Подписаться</button>
-                </form>
+              	<input class="name_form" id="form12" type="text" name="email" placeholder="Ваш e-mail…">
+				<button type="submit" onclick="copyMail()" data-fancybox data-src="#hidden-content">Подписаться</button>
             </div>
             <div class="clear"></div>
             <ul class="footer-menu">
@@ -592,9 +588,9 @@
    <div id="hidden-content" class="hidden_block">
     	<h3>Отправить заявку</h3>
     	<form action="/request/email/" method="post" id="demo-form">
-    		<input type="text" name="name" placeholder="Ваше имя">
-    		<input type="text" name="email" placeholder="Email или Телефон">
-			<button class="btn g-recaptcha" data-sitekey="6LeogSQUAAAAAB4lW6uwNuC28hcU6jdQsVF78Uvw" data-callback="onSubmit">Отправить заявку</button>
+    		<input id="name" type="text" onkeyup="checkParams()" name="name" placeholder="Ваше имя" pattern="^[A-Za-zА-Яа-яЁё\s]+$" required>
+    		<input id="form13" type="text" onkeyup="checkParams()" name="email" placeholder="Email или телефон" required>
+		   	<button disabled="disabled" id="submit" class="btn g-recaptcha" data-sitekey="6LeogSQUAAAAAB4lW6uwNuC28hcU6jdQsVF78Uvw" data-callback="onSubmit">Отправить заявку</button>
     	</form>
     </div>
 <script src="../static/js/jquery.fancybox.min.js"></script>
