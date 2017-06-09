@@ -22,7 +22,7 @@
 
 //Отключение кнопки отправить
 $(window).load(function () {
-	$('#submit').attr('disabled', 'disabled');
+	$('#submit_btn').attr('disabled', 'disabled');
 });
 
 //Проверка на пустые поля
@@ -31,9 +31,9 @@ function checkParams() {
 	var email = $('#form13').val();
 
 	if (name.length != 0 && email.length != 0) {
-		$('#submit').removeAttr('disabled');
+		$('#submit_btn').removeAttr('disabled');
 	} else {
-		$('#submit').attr('disabled', 'disabled');
+		$('#submit_btn').attr('disabled', 'disabled');
 	}
 }
 
