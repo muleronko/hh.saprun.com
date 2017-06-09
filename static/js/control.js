@@ -28,7 +28,7 @@ $(window).load(function () {
 //Проверка на пустые поля
 function checkParams() {
 	var name = $('#name').val();
-	var email = $('#email').val();
+	var email = $('#form13').val();
 
 	if (name.length != 0 && email.length != 0) {
 		$('#submit').removeAttr('disabled');
