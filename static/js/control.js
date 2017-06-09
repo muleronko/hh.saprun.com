@@ -20,6 +20,13 @@
 
 })(jQuery);
 
+//аккардион
+$( function() {
+	$( "#accordion" ).accordion({
+		heightStyle: "content"
+});
+});
+
 //Отключение кнопки отправить
 $(window).load(function () {
 	$('#submit_btn').attr('disabled', 'disabled');

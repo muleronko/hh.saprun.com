@@ -407,10 +407,10 @@ section.belt-keys {
 					display: block;
 					color: @black;
 					width: 170px;
-					text-decoration: none;
 					a:link,
 					a:active,
 					a:visited {
+						text-decoration: none;
 						//color: @deepblue;
 						&:hover {
 							text-decoration: none;
@@ -1832,6 +1832,9 @@ section.belt-faq {
 			display: block;
 			width: 970px;
 			padding: 0;
+			h3 {
+				margin: 32px 0;
+			}
 			li {
 				background: @white url('../img/acc_down_off.svg') 924px center no-repeat;
 				font: normal 16px/56px ProximaB, sans-serif;
@@ -1853,8 +1856,12 @@ section.belt-faq {
 				&:last-child {
 					margin-bottom: 0;
 				}
+
 			}
 		}
+	}
+	.bloc_text {
+		text-align: center;
 	}
 }
 
