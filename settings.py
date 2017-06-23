@@ -14,7 +14,7 @@ class Config(object):
                              'тел: %(phone)s'
 
     MAIL_SUBJECT = 'HH request'
-    MAIL_RECIPIENTS = ['maksim.glebov@saprun.com']
+    MAIL_RECIPIENTS = ['hhive@saprun.com']
 
     RECAPTCHA_SITE_KEY = '6LeogSQUAAAAAB4lW6uwNuC28hcU6jdQsVF78Uvw'
     RECAPTCHA_SECRET_KEY = '6LeogSQUAAAAAEnF5OvGCwxuw6ETYfpaXwaLUOtf'
