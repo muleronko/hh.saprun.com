@@ -639,7 +639,7 @@
     	<form action="/request/email/" method="post" id="demo-form">
     		<input id="name" type="text" onkeyup="checkParams()" name="name" placeholder="Ваше имя" pattern="^[A-Za-zА-Яа-яЁё\s]+$" required>
     		<input id="form13" type="text" onkeyup="checkParams()" name="email" placeholder="Email или телефон" required>
-		   	<button disabled="disabled" id="submit_btn" class="btn g-recaptcha" data-sitekey="6LeogSQUAAAAAB4lW6uwNuC28hcU6jdQsVF78Uvw" data-callback="onSubmit">Отправить заявку</button>
+		   	<button disabled="disabled" id="submit_btn" onclick="ga("send", "event", "заявка", "отправлена");" class="btn g-recaptcha" data-sitekey="6LeogSQUAAAAAB4lW6uwNuC28hcU6jdQsVF78Uvw" data-callback="onSubmit">Отправить заявку</button>
     	</form>
     </div>
 <script src="../static/js/jquery.fancybox.min.js"></script>
