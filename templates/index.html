@@ -109,7 +109,7 @@
         </div>
         <div class="subscribe">
             <p>Получите подробную информацию по<br>платформе <span class="bold">HyperHive</span> на свой e-mail</p>
-            <input class="name_form" id="form11" type="text" name="email" placeholder="Ваш e-mail…">
+            <input class="name_form" id="email_copy" type="text" name="email" placeholder="Ваш e-mail…">
 			<button type="submit" onclick="copyMail()" data-fancybox data-src="#hidden-content">Свяжитесь с нами</button>
         </div>
     </section>
@@ -614,7 +614,7 @@
         <div class="wrapper">
             <div class="subscribe">
                 <p>Будьте в курсе обновлений платформы <span class="bold">HyperHive</span></p>
-              	<input class="name_form" id="form12" type="text" name="email" placeholder="Ваш e-mail…">
+              	<input class="name_form" id="email_copy2" type="text" name="email" placeholder="Ваш e-mail…">
 				<button type="submit" onclick="copyMail()" data-fancybox data-src="#hidden-content">Подписаться</button>
             </div>
             <div class="clear"></div>
@@ -636,10 +636,15 @@
    <!-- Modal Windows --> 
    <div id="hidden-content" class="hidden_block">
     	<h3>Отправить заявку</h3>
+    	
     	<form action="/request/email/" method="post" id="demo-form">
-    		<input id="name" type="text" onkeyup="checkParams()" name="name" placeholder="Ваше имя" pattern="^[A-Za-zА-Яа-яЁё\s]+$" required>
-    		<input id="form13" type="text" onkeyup="checkParams()" name="email" placeholder="Email или телефон" required>
+    		<input type="text" onkeyup="checkParams()" name="company" placeholder="Ваша компания">
+    		<input id="name" type="text" onkeyup="checkParams()" name="name" placeholder="Ваше имя *" required>
+    		<input id="email" type="text" onkeyup="checkParams()" name="email" placeholder="Email *" required>
+    		<input id="phone" type="text" onkeyup="checkParams()" name="phone" placeholder="Телефон *" required>
+    		
 		   	<button disabled="disabled" id="submit_btn" onclick="ga("send", "event", "заявка", "отправлена");" class="btn g-recaptcha" data-sitekey="6LeogSQUAAAAAB4lW6uwNuC28hcU6jdQsVF78Uvw" data-callback="onSubmit">Отправить заявку</button>
+		   	<p class="req_fields">* обязательные <span>поля</span></p>
     	</form>
     </div>
 <script>
