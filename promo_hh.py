@@ -1,4 +1,4 @@
-# coding=utf-8
+# -*- coding: utf-8 -*-
 
 import sys
 import logging
@@ -34,31 +34,21 @@ def send_js(path):
     return send_from_directory('/', path)
 
 
-@app.route('/request/email/', methods=['POST'])
-def by_email():
+@app.route('/demo-request/', methods=['POST'])
+def demo_request():
     if not recaptcha.verify():
         response = jsonify({
             'message': 'Sorry, but you are robot. Call some human to pass through.'
         })
         response.status_code = 403
         return response
-    name = request.form.get('name', '')
-    email = request.form.get('email')
-    send_message(app.config.get('EMAIL_REQUEST_TEMPLATE').decode('utf-8') % locals())
-    return redirect(url_for('index'))
-
-
-@app.route('/request/phone/', methods=['POST'])
-def by_phone():
-    if not recaptcha.verify():
-        response = jsonify({
-            'message': 'Sorry, but you are robot. Call some human to pass through.'
-        })
-        response.status_code = 403
-        return response
+    company = request.form.get('company', None)
+    if not company:
+        company = u'не указана'
     name = request.form.get('name')
     phone = request.form.get('phone')
-    send_message(app.config.get('PHONE_REQUEST_TEMPLATE').decode('utf-8') % locals())
+    email = request.form.get('email')
+    send_message(app.config.get('MAIL_REQUEST_TEMPLATE').decode('utf-8') % locals())
     return redirect(url_for('index'))
 
 
