@@ -18,13 +18,16 @@
 		$('#parallax-bg1').css('top', (0 - (scrolled * .25)) + 'px');
 	}
 
+
 })(jQuery);
 
+
+
 //аккардион
-$( function() {
-	$( "#accordion" ).accordion({
+$(function () {
+	$("#accordion").accordion({
 		heightStyle: "content"
-});
+	});
 });
 
 //Отключение кнопки отправить
@@ -32,13 +35,16 @@ $(window).load(function () {
 	$('#submit_btn').attr('disabled', 'disabled');
 });
 
+//Плавный скрол
+
+
 //Проверка на пустые поля
 function checkParams() {
 	var name = $('#name').val();
 	var email = $('#email').val();
 	var phone = $('#phone').val();
 
-	if (name.length != 0 && email.length != 0 && phone.length != 0 ) {
+	if (name.length != 0 && email.length != 0 && phone.length != 0) {
 		$('#submit_btn').removeAttr('disabled');
 	} else {
 		$('#submit_btn').attr('disabled', 'disabled');
@@ -52,3 +58,38 @@ function copyMail() {
 	var email = document.getElementById('email');
 	email.value = email_copy.value || email_copy2.value;
 }
+
+//Слайдер
+document.addEventListener('DOMContentLoaded', function () {
+	var controls = document.querySelectorAll('.wrapper-ul li'),
+		slides = document.querySelectorAll('.belt-slider .wrapper'),
+		act_slide = document.getElementsByClassName('active-slide')[0],
+		prev = act_slide.previousElementSibling,
+		next = act_slide.nextElementSibling,
+		opos = 1;
+
+	for (let item of controls) {
+		item.style.opacity = (opos / 4).toString();
+		item.addEventListener('click', cntr);
+	}
+	prev ? prev.style.opacity = (opos / 2).toString() : null;
+	next ? next.style.opacity = (opos / 2).toString() : null;
+
+	slides[0].style.opacity = opos;
+
+	function cntr() {
+		for (let item of controls) {
+			item.classList.remove("active-slide");
+		}
+		this.classList.toggle("active-slide");
+		for (let iteme of slides) {
+			iteme.style.opacity = "0";
+			iteme.style.zIndex = "0";
+		}
+		document.onclick = function (element) {
+			var tab = element.target.id;
+			slides[tab[1]].style.opacity = opos;
+		}
+
+	}
+});
