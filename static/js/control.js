@@ -35,16 +35,14 @@ $(window).load(function () {
 	$('#submit_btn').attr('disabled', 'disabled');
 });
 
-//Плавный скрол
-
-
 //Проверка на пустые поля
 function checkParams() {
 	var name = $('#name').val();
 	var email = $('#email').val();
 	var phone = $('#phone').val();
+	var company = $('#company').val();
 
-	if (name.length != 0 && email.length != 0 && phone.length != 0) {
+	if (name.length != 0 && email.length != 0 && phone.length != 0 && company.length != 0) {
 		$('#submit_btn').removeAttr('disabled');
 	} else {
 		$('#submit_btn').attr('disabled', 'disabled');
@@ -86,10 +84,9 @@ document.addEventListener('DOMContentLoaded', function () {
 			iteme.style.opacity = "0";
 			iteme.style.zIndex = "0";
 		}
-		document.onclick = function (element) {
-			var tab = element.target.id;
-			slides[tab[1]].style.opacity = opos;
-		}
+
+		let tab = this.id;
+		slides[tab[1]].style.opacity = opos;
 
 	}
 });

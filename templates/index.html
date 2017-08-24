@@ -862,7 +862,7 @@
 		<h3>Отправить заявку</h3>
 
 		<form action="/demo-request/" method="post" id="demo-form">
-			<input type="text" onkeyup="checkParams()" name="company" placeholder="Ваша компания">
+			<input id="company" type="text" onkeyup="checkParams()" name="company" placeholder="Ваша компания *" required>
 			<input id="name" type="text" onkeyup="checkParams()" name="name" placeholder="Ваше имя *" required>
 			<input id="email" type="text" onkeyup="checkParams()" name="email" placeholder="Email *" required>
 			<input id="phone" type="text" onkeyup="checkParams()" name="phone" placeholder="Телефон *" required>
