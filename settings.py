@@ -5,19 +5,19 @@ class Config(object):
     DEBUG = False
     SECRET_KEY = 'development key'
 
-    MAIL_DEFAULT_SENDER = 'promo-hh@foo.com'
-    MAIL_REQUEST_TEMPLATE = 'Поступила заявка на получение демо-доступа: \n\n' \
-                            'тип формы: %(types)s \n' \
-                            'компания: %(company)s \n' \
-                            'имя: %(name)s \n' \
-                            'тел: %(phone)s \n' \
-                            'e-mail: %(email)s \n'
-    MAIL_SUBJECT = 'HH request'
+    MAIL_DEFAULT_SENDER = 'hhive@saprun.com'
+    MAIL_REQUEST_TEMPLATE = 'Поступила заявка! \n\n' \
+                            'Тип заявки: %(types)s \n' \
+                            'Компания: %(company)s \n' \
+                            'Имя: %(name)s \n' \
+                            'Тел: %(phone)s \n' \
+                            'E-mail: %(email)s \n'
+    MAIL_SUBJECT = 'HH-заявка'
     MAIL_RECIPIENTS = ['hhive@saprun.com']
     MAIL_ANSWER = 'Добрый день! Благодарим вас за интерес к мобильной платформе HyperHive. ' \
                   'Подробная документация, включая пошаговое руководство по загрузке и установке, ' \
-                  'доступна по ссылке: https://eigenmethod.atlassian.net/wiki/spaces/HH1708RU/overview' \
-                  'Просьба сообщить нам ID инсталляции для предоставления вам временной лицензии.' \
+                  'доступна по ссылке: https://eigenmethod.atlassian.net/wiki/spaces/HH1708RU/overview ' \
+                  'Просьба сообщить нам ID инсталляции для предоставления вам временной лицензии. ' \
                   'По любым вопросам вы можете обратиться к нашему менеджеру Денису Носкову: +7 962 705 79 00, ' \
                   '+7 812 438 27 84 (доб. 3326) denis.noskov@saprun.com'
 

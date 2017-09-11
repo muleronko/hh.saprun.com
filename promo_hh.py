@@ -34,10 +34,11 @@ def send_js(path):
     return send_from_directory('/', path)
 
 
-def send_message(subject, recipients, body):
+def send_message(subject, recipients, body, sender=None):
     msg = Message(subject=subject,
                   recipients=recipients,
-                  body=body)
+                  body=body,
+                  sender=sender)
     app.logger.info(body)
     mail.send(msg)
 
@@ -56,13 +57,14 @@ def demo_request():
     email = request.form.get('email')
     types = request.form.get('types')
     # отправляем уведомление о заявке
-    send_message(app.config.get('MAIL_SUBJECT'),
-                 app.config.get('MAIL_RECIPIENTS'),
-                 app.config.get('MAIL_REQUEST_TEMPLATE').decode('utf-8') % locals())
+    send_message(subject=app.config.get('MAIL_SUBJECT'),
+                 recipients=app.config.get('MAIL_RECIPIENTS'),
+                 body=app.config.get('MAIL_REQUEST_TEMPLATE').decode('utf-8') % locals(),
+                 sender='promo-hh@foo.com')
     # отправляем автоответ на заявку
-    send_message(app.config.get('MAIL_SUBJECT'),
-                 [email],
-                 app.config.get('MAIL_ANSWER'))
+    send_message(subject=app.config.get('MAIL_SUBJECT'),
+                 recipients=[email],
+                 body=app.config.get('MAIL_ANSWER'))
 
     return redirect(url_for('index'))
 
