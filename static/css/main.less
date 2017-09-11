@@ -61,7 +61,8 @@ header {
 			letter-spacing: .5px;
 			text-align: center;
 			padding: 0 16px;
-			display: block;
+			/* display: block; */
+			display: none;
 			outline: none;
 			color: @white;
 			border: none;
@@ -147,16 +148,14 @@ section.belt-slider {
 		width: 1170px;
 		margin: auto;
 		position: relative;
-		
 		ul.pagination {
 			list-style: none;
 			display: block;
 			position: absolute;
 			z-index: 2;
 			top: 80px;
-			right:90px;
+			right: 90px;
 			padding: 0;
-			
 			li {
 				display: inline-block;
 				background: @white;
@@ -192,7 +191,6 @@ section.belt-slider {
 		left: 0;
 		bottom: 0;
 		right: 0;
-		
 		h1 {
 			font: normal 56px RalewayL, sans-serif;
 			letter-spacing: .5px;
@@ -204,6 +202,13 @@ section.belt-slider {
 			span.black {
 				font-family: RalewayB;
 			}
+		}
+		p.common-count{
+			position: absolute;
+			top: 270px;
+			right: 0px;
+			padding-left: 450px;
+			font: normal 13px ProximaB, sans-serif;
 		}
 		p {
 			font: normal 16px ProximaR, sans-serif;
@@ -285,11 +290,21 @@ section.belt-slider {
 			}
 		}
 	}
-	.act_slide{
-		opacity: 1;
-		z-index: 1;
+	.show-numb {
+		.stepper {
+			animation: show-numb 1s ease-out;
+		}
 	}
-
+	@keyframes show-numb {
+		0% {
+			transform: translateX(100px);
+			opacity: 0;
+		}
+		100% {
+			transform: translateX(0);
+			opacity: 1;
+		}
+	}
 	.wrapper:nth-child(3) {
 		h1 {
 			width: 650px;
@@ -370,6 +385,7 @@ section.belt-about {
 			&:focus {
 				background: lighten(@blue, 32%);
 				border: 1px solid @blue;
+				outline: none;
 			}
 		}
 		button {
@@ -470,8 +486,24 @@ section.belt-keys {
 /* --- BELT TECNOLOGYS -----------------------------------------------------
 ---------------------------------------------------------------------------- */
 
+.show-button-animation {
+	animation: show-button .5s ease-out;
+	animation-fill-mode: forwards;
+}
+
+@keyframes show-button {
+	0% {
+		transform: translateY(50px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
 section.belt-tecnologys {
-	background: transparent url('../img/bg_2.png') center center no-repeat;
+	background: transparent url('../img/copter.png') center center no-repeat;
 	display: block;
 	height: 128px;
 	width: 100%;
@@ -525,7 +557,8 @@ section.belt-types {
 				margin: 24px 30px 0 0;
 				background: @white;
 				position: relative;
-				display: block;
+				/* display: block; */
+				display: none;
 				outline: none;
 				color: @black;
 				height: 48px;
@@ -628,7 +661,7 @@ section.belt-business {
 		h3 {
 			margin: 0 0 40px 0;
 			width: 670px;
-			padding: 0;
+			width: 670px;
 		}
 		p {
 			margin: 0 30px 0 0;
@@ -1112,6 +1145,19 @@ section.belt-integration {
 	}
 }
 
+.move-breacks {
+	animation: move-breacks 1s ease-out;
+}
+
+@keyframes move-breacks {
+	0% {
+		background-size: 90% 100%;
+	}
+	100% {
+		background-size: 100% 100%;
+	}
+}
+
 
 /* --- BELT INNER ----------------------------------------------------------
 ---------------------------------------------------------------------------- */
@@ -1508,8 +1554,22 @@ section.belt-price {
 /* --- BELT COMPANY --------------------------------------------------------
 ---------------------------------------------------------------------------- */
 
+@keyframes move-bg {
+	0% {
+		background-size: 100% 100%, 100% 100%, 100% 100%;
+	}
+	100% {
+		background-size: 0% 100%, 100% 100%, 100% 100%;
+	}
+}
+
+.move-bg {
+	animation: move-bg 3s ease-out;
+	animation-fill-mode: forwards;
+}
+
 section.belt-company {
-	background: lighten(@gray, 17%) url('../img/graph_bg.png') center bottom no-repeat;
+	background: url('../img/graph_bg_fill.png') right bottom no-repeat, url('../img/graph_bg.png') center bottom no-repeat, url('../img/graph_bg_fill.png') no-repeat;
 	border-bottom: 1px solid lighten(@gray, 12%);
 	display: block;
 	width: 100%;
@@ -1818,7 +1878,8 @@ section.belt-garant {
 			background: @white;
 			position: relative;
 			margin: 0 auto;
-			display: block;
+			/* display: block; */
+			display: none;
 			outline: none;
 			color: @black;
 			height: 48px;
@@ -1862,7 +1923,19 @@ section.belt-faq {
 			width: 970px;
 			padding: 0;
 			h3 {
+				outline: none;
+			}
+			.ui-corner-all {
 				margin: 32px 0;
+			}
+			.ui-state-active {
+				margin-top: 32px;
+			}
+			.ui-state-active li {
+				background: @white url('../img/acc_up_on.svg') 924px center no-repeat;
+//				background-position: top right ;
+				border-bottom: 0px solid;
+				border-radius: 8px 0 0 0;
 			}
 			li {
 				background: @white url('../img/acc_down_off.svg') 924px center no-repeat;
@@ -1890,6 +1963,13 @@ section.belt-faq {
 	}
 	.bloc_text {
 		text-align: center;
+		background: #fff;
+		border: 1px solid lighten(@gray, 12%);
+		border-top: 0px;
+		broder-top: 0px solid;
+		padding: 20px;
+		padding-top: 0;
+		border-radius: 0 0 8px 0;
 	}
 }
 
@@ -1975,6 +2055,7 @@ footer {
 				&:focus {
 					background: lighten(@green, 36%);
 					border: 1px solid @green;
+					outline: none;
 				}
 			}
 			button {

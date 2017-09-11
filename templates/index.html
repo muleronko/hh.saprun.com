@@ -19,7 +19,6 @@
 		function onSubmit(token) {
 			document.getElementById("demo-form").submit();
 		}
-
 	</script>
 
 	<!-- Yandex.Metrika counter -->
@@ -52,12 +51,11 @@
 				f();
 			}
 		})(document, window, "yandex_metrika_callbacks");
-
 	</script>
 	<noscript><div><img src="https://mc.yandex.ru/watch/40629630" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 	<!-- /Yandex.Metrika counter -->
-	
-		<script>
+
+	<script>
 		(function(i, s, o, g, r, a, m) {
 			i['GoogleAnalyticsObject'] = r;
 			i[r] = i[r] || function() {
@@ -72,9 +70,8 @@
 
 		ga('create', 'UA-42333986-3', 'auto');
 		ga('send', 'pageview');
-
 	</script>
-	
+
 </head>
 
 <body>
@@ -92,7 +89,7 @@
 			</ul>
 			<div class="phone">
 				<p>8 812 <span>438 27 84</span></p>
-				<a href="./#.html" title="Обратный звонок" target="_self" data-fancybox data-src="#hidden-content">Обратный звонок</a>
+				<a href="./#.html" title="Обратный звонок" target="_self" data-fancybox data-src="#hidden-content" data-types="HH-request-Call">Обратный звонок</a>
 			</div>
 		</div>
 	</header>
@@ -105,7 +102,7 @@
 				<li id="s2"></li>
 			</ul>
 		</div>
-		<div class="wrapper act-slide">
+		<div class="wrapper">
 			<h1>Узнайте, чем <span class="black">HyperHive</span> лучше других платформ</h1>
 			<p><span class="bold">Стоимость</span> лицензий. <span class="bold">Скорость</span> передачи данных. <span class="bold">ГОСТ-алгоритмы</span> информационной безопасности. <span class="bold">Экономия</span> времени разработки.</p>
 			<div class="control-tool">
@@ -113,8 +110,9 @@
 				<span class="play"></span>
 				<span class="time">-04:33</span>
 			</div>
+
+			<p class="common-count">/01</p>
 			<div class="stepper">
-				<p class="common-count">/01</p>
 				<div class="slide-number"><img src="../static/img/slider_1.png" alt=""></div>
 			</div>
 		</div>
@@ -127,8 +125,8 @@
 				<span class="play"></span>
 				<span class="time">-04:33</span>
 			</div>
+			<p class="common-count">/02</p>
 			<div class="stepper">
-				<p class="common-count">/02</p>
 				<div class="slide-number"><img src="../static/img/slider_02.png" alt=""></div>
 			</div>
 		</div>
@@ -146,8 +144,8 @@
 				<li></li>
 				<li></li>
 			</ul>
+			<p class="common-count">/03</p>
 			<div class="stepper">
-				<p class="common-count">/03</p>
 				<div class="slide-number"><img src="../static/img/slider_03.png" alt=""></div>
 			</div>
 		</div>
@@ -161,7 +159,7 @@
 		<div class="subscribe">
 			<p>Получите подробную информацию по<br>платформе <span class="bold">HyperHive</span> на свой e-mail</p>
 			<input class="name_form" id="email_copy" type="text" name="email" placeholder="Ваш e-mail…">
-			<button type="submit" onclick="copyMail()" data-fancybox data-src="#hidden-content">Свяжитесь с нами</button>
+			<button type="submit" onclick="copyMail()" data-fancybox data-src="#hidden-content" data-types="HH request call">Свяжитесь с нами</button>
 		</div>
 	</section>
 	<div class="clear"></div>
@@ -171,21 +169,21 @@
 			<ul class="hex-list">
 				<li>
 					<span></span>
-					<p>Online и offline <a href="" title="Принципы работы" target="_self">принципы<br>работы</a></p>
+					<p>Online и offline принципы<br>работы</p>
 				</li>
 				<li>
 					<span></span>
-					<p>Готовая<br><a href="" title="Методология" target="_self">методология</a> внедрения</p>
+					<p>Готовая<br>методология внедрения</p>
 				</li>
 				<li>
 					<span></span>
-					<p>Исчерпывающая <a href="" title="Документация" target="_self">документация</a><br>на русском языке</p>
+					<p><a href="https://eigenmethod.atlassian.net/wiki/spaces/HH1708RU/overview" title="Документация" target="_blank">Документация</a><br>на русском <br>языке</p>
 				</li>
 			</ul>
 		</div>
 	</section>
 	<div class="clear"></div>
-	<section class="belt-tecnologys">
+	<section class="belt-tecnologys" id="parallax-bg2">
 		<ul class="wrapper">
 			<li><img src="../static/img/logo01.png" alt=""></li>
 			<li><img src="../static/img/logo02.png" alt=""></li>
@@ -274,7 +272,7 @@
 						<p>контроль складских запасов</p>
 					</li>
 					<li><span></span>
-						<p>производственная безопасность - <a href="http://sv.saprun.com/">SecureVision</a></p>
+						<p>производственная безопасность - <a target="_blank" href="http://sv.saprun.com/">SecureVision</a></p>
 					</li>
 				</ul>
 				<ul class="check-list">
@@ -300,7 +298,7 @@
 			<p><span class="bold">Сокращение времени</span>, затрачиваемого персоналом на выполнение бизнес-процессов<br><br><span class="bold">Аутентификация</span> и <span class="bold">авторизация</span> мобильного пользователя в корпоративных системах<br><br><span class="bold">Снижение нагрузки</span> на бизнес-системы за счёт кеширования данных на мобильном устройстве<br><br>Оперативная <span class="bold">техническая поддержка</span> IT-специалистов в рабочее время<br><br><span class="bold">Отчёты</span>, аудит и логирование поведения системы и действий пользователей</p>
 			<div class="clear"></div>
 			<div class="control-tools">
-				<button data-fancybox data-src="#hidden-content">Заказать демонстрацию</button>
+				<button data-fancybox data-src="#hidden-content" class="show-button" data-types="HH request demo">Заказать демонстрацию</button>
 				<p><a href="./files/HyperHive.pptx" title="Скачайте презентацию" target="_self">Скачайте презентацию</a><br>HyperHive (pdf, 10Мб)</p>
 				<ul class="pagination">
 					<li class="active-slide"></li>
@@ -338,7 +336,7 @@
 						<p><span class="bold">Медленная</span> реакция команды разработки на требования бизнеса</p>
 					</li>
 				</ul>
-				<button data-fancybox data-src="#hidden-content">Найти решение</button>
+				<button class="show-button" data-fancybox data-src="#hidden-content" data-types="HH-request-DEMO">Найти решение</button>
 			</div>
 		</div>
 	</section>
@@ -376,7 +374,7 @@
 					<p>Партнёрские семинары и work-shop'ы</p>
 				</li>
 				<li><span class="icon"></span>
-					<p><span class="bold">Cloud</span> и <span class="bold">on-premise</span> решения</p>
+					<p><span class="bold">Cloud</span> и <span class="bold">on-premise</span> редакции</p>
 				</li>
 			</ul>
 			<ul class="adv-item2">
@@ -411,7 +409,7 @@
 					<p>Поддержка <span class="bold">chat-бот</span></p>
 				</li>
 			</ul>
-			<button data-fancybox data-src="#hidden-content">Запросить ТКП</button>
+			<button class="show-button" data-fancybox data-src="#hidden-content" data-types="HH-request-TKP">Запросить ТКП</button>
 			<p class="quote">Мы свяжемся с Вами в течение <span class="bold">24 часов</span></p>
 		</div>
 	</section>
@@ -543,7 +541,7 @@
 				</li>
 				<li>
 					<span class="icon"></span>
-					<p><span class="bold">Библиотека</span> визуальных<br>компонентов <a href="" title="$mol" target=_self>$mol</a></p>
+					<p><span class="bold">Библиотека</span> визуальных<br>компонентов <a href="http://mol.js.org/" title="$mol" target=_blank>$mol</a></p>
 				</li>
 				<li>
 					<span class="icon"></span>
@@ -571,7 +569,7 @@
 				</li>
 			</ul>
 			<div class="clear"></div>
-			<button data-fancybox data-src="#hidden-content">Запросить ТКП</button>
+			<button class="show-button" data-fancybox data-src="#hidden-content" data-types="HH-request-TKP">Запросить ТКП</button>
 		</div>
 	</section>
 	<div class="clear"></div>
@@ -601,7 +599,7 @@
 				</li>
 			</ul>
 			<div class="clear"></div>
-			<button data-fancybox data-src="#hidden-content">Попробовать</button>
+			<button class="show-button" data-fancybox data-src="#hidden-content" data-types="HH-request-DEMO">Попробовать</button>
 		</div>
 	</section>
 	<div class="clear"></div>
@@ -719,7 +717,7 @@
 					</li>
 				</ul>
 				<div class="clear"></div>
-				<button data-fancybox data-src="#hidden-content">Заказать</button>
+				<button class="show-button" data-fancybox data-src="#hidden-content">Заказать</button>
 			</div>
 		</div>
 	</section>
@@ -727,7 +725,7 @@
 	<section class="belt-company">
 		<div class="wrapper">
 			<h3><span class="black">О компании</span></h3>
-			<p class="description"><span class="bold">SAPRUN Group</span> специализируется на внедрении бизнес-приложений на платформах <span class="bold">SAP</span>, <span class="bold">Qlik</span>, <span class="bold">PROGNOZ</span>, а также на базе собственной мобильной платформы <span class="bold">HyperHive</span>.<br><br>Одно из наших фокусных бизнес-направлений – заказная разработка мобильных и веб-<br>приложений.</p>
+			<p class="description"><span class="bold">SAPRUN Group</span> специализируется на внедрении бизнес-приложений на платформах <span class="bold">SAP</span>, <span class="bold">Qlik</span>, <span class="bold">Prognoz Platform</span>, а также на базе собственной мобильной платформы <span class="bold">HyperHive</span>.<br><br>Одно из наших фокусных бизнес-направлений – заказная разработка мобильных и веб-<br>приложений.</p>
 			<ul class="company-adv">
 				<li>
 					<span class="icon"></span>
@@ -793,7 +791,7 @@
 				</li>
 			</ul>
 			<div class="clear"></div>
-			<button data-fancybox data-src="#hidden-content">Заказать демонстрацию</button>
+			<button data-fancybox data-src="#hidden-content" class="show-button" data-types="HH-request-DEMO">Заказать демонстрацию</button>
 		</div>
 	</section>
 	<div class="clear"></div>
@@ -802,12 +800,11 @@
 			<h3>Часто задаваемые<br><span class="black">вопросы</span></h3>
 
 			<ul class="faq-list" id="accordion">
-
 				<h3>
 					<li>Зачем продукт, если есть свои разработчики?</li>
 				</h3>
 				<div class="bloc_text">
-					Использование HyperHive позволяет «своим» разработчикам сфокусироваться на бизнес-задачах, а технические и интеграционные вопросы успешно решает сервер HyperHive. </div>
+				Использование HyperHive позволяет своим разработчикам сфокусироваться на бизнес-задачах, а технические и интеграционные вопросы успешно решает сервер HyperHive. </div>
 				<h3>
 					<li>Сколько необходимо времени, чтобы написать минимальное мобильное приложение?</li>
 				</h3>
@@ -819,7 +816,7 @@
 				<h3>
 					<li>Что входит в техническую поддержку?</li>
 				</h3>
-				<div class="bloc_text">Наша служба поддержка готова помочь по любому вопросу, связанному с использованием платформы HyperHive.</div>
+				<div class="bloc_text">Наша служба поддержки готова помочь по любому вопросу, связанному с использованием платформы HyperHive.</div>
 				<h3>
 					<li>Каковы требования к квалификации разработчиков?</li>
 				</h3>
@@ -830,7 +827,7 @@
 	<div class="clear"></div>
 	<section class="belt-more">
 		<div class="wrapper">
-			<p class="more">Остались вопросы? <a href="mailto:hhive@saprun.com" title="Обратная связь" target="_self">Напишите нам</a></p>
+			<p class="more">Остались вопросы? <a href="#" title="Обратная связь" target="_self"  data-fancybox data-src="#hidden-content" data-types="HH request call">Напишите нам</a></p>
 		</div>
 	</section>
 	<div class="clear"></div>
@@ -839,7 +836,7 @@
 			<div class="subscribe">
 				<p>Будьте в курсе обновлений платформы <span class="bold">HyperHive</span></p>
 				<input class="name_form" id="email_copy2" type="text" name="email" placeholder="Ваш e-mail…">
-				<button type="submit" onclick="copyMail()" data-fancybox data-src="#hidden-content">Подписаться</button>
+				<button type="submit" onclick="copyMail()" data-fancybox data-src="#hidden-content" data-types="HH-request-Call">Подписаться</button>
 			</div>
 			<div class="clear"></div>
 			<ul class="footer-menu">
@@ -851,7 +848,7 @@
 			</ul>
 			<div class="phone">
 				<p>8 812 <span class="bold">438 27 84</span></p>
-				<a href="./#.html" title="Обратный звонок" target="_self" data-fancybox data-src="#hidden-content">Обратный звонок</a>
+				<a href="./#.html" title="Обратный звонок" target="_self" data-fancybox data-src="#hidden-content" data-types="HH-request-Call">Обратный звонок</a>
 			</div>
 			<div class="clear"></div>
 			<p class="footer-info">2017 © All right reserved<br><a href="http://www.saprun.com" title="saprun.com" target="_blank">saprun.com</a></p>
@@ -866,8 +863,9 @@
 			<input id="name" type="text" onkeyup="checkParams()" name="name" placeholder="Ваше имя *" required>
 			<input id="email" type="text" onkeyup="checkParams()" name="email" placeholder="Email *" required>
 			<input id="phone" type="text" onkeyup="checkParams()" name="phone" placeholder="Телефон *" required>
+			<input id="types" type="hidden">
 
-			<button disabled="disabled" id="submit_btn" onclick = "ga('send', 'event', 'заявка', 'отправлена');" class="btn g-recaptcha" data-sitekey="6LeogSQUAAAAAB4lW6uwNuC28hcU6jdQsVF78Uvw" data-callback="onSubmit">Отправить заявку</button>
+			<button disabled="disabled" id="submit_btn" onclick="ga('send', 'event', 'заявка', 'отправлена');" class="btn g-recaptcha" data-sitekey="6LeogSQUAAAAAB4lW6uwNuC28hcU6jdQsVF78Uvw" data-callback="onSubmit" >Отправить заявку</button>
 			<p class="req_fields">* обязательные <span>поля</span></p>
 		</form>
 	</div>

@@ -42,12 +42,11 @@ def demo_request():
         })
         response.status_code = 403
         return response
-    company = request.form.get('company', None)
-    if not company:
-        company = u'не указана'
+    company = request.form.get('company')
     name = request.form.get('name')
     phone = request.form.get('phone')
     email = request.form.get('email')
+	types = request.form.get('types')
     send_message(app.config.get('MAIL_REQUEST_TEMPLATE').decode('utf-8') % locals())
     return redirect(url_for('index'))
 

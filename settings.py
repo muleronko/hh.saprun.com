@@ -7,6 +7,7 @@ class Config(object):
     MAIL_DEFAULT_SENDER = 'promo-hh@foo.com'
 
     MAIL_REQUEST_TEMPLATE = 'Поступила заявка на получение демо-доступа: \n\n' \
+							'тип формы: %(types)s \n' \
                             'компания: %(company)s \n' \
                             'имя: %(name)s \n' \
                             'тел: %(phone)s \n' \
