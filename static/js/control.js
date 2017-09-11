@@ -180,21 +180,21 @@ window.onscroll = function () {
 
 
 //сообщение, что email отправлен
-function messege(){
-	var form = document.getElementById("demo-form"),
-	input = document.getElementsByTagName("input"),
-	request = new XMLHttpRequest();
-
-request.onreadystatechange = function(){
-	if(request.readyState === 4) {
-		for(let item of input){
-				item.remove();
-		}
-		if(request.status === 200) {
-			form.innerHTML = "Сообщение отправлено, в ближайшее время мы свяжемся с Вами!";
-		} else {
-			form.innerHTML = "Сообщение не отправлено, повторите попытку или позвоните нам!";
-		}
-	}
-}
-}
+//function messege(){
+//	var form = document.getElementById("demo-form"),
+//	input = document.getElementsByTagName("input"),
+//	request = new XMLHttpRequest();
+//
+//request.onreadystatechange = function(){
+//	if(request.readyState === 4) {
+//		for(let item of input){
+//				item.remove();
+//		}
+//		if(request.status === 200) {
+//			form.innerHTML = "Сообщение отправлено, в ближайшее время мы свяжемся с Вами!";
+//		} else {
+//			form.innerHTML = "Сообщение не отправлено, повторите попытку или позвоните нам!";
+//		}
+//	}
+//}
+//}
