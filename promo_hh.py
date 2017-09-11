@@ -34,6 +34,14 @@ def send_js(path):
     return send_from_directory('/', path)
 
 
+def send_message(subject, recipients, body):
+    msg = Message(subject=subject,
+                  recipients=recipients,
+                  body=body)
+    app.logger.info(body)
+    mail.send(msg)
+
+
 @app.route('/demo-request/', methods=['POST'])
 def demo_request():
     if not recaptcha.verify():
@@ -46,17 +54,17 @@ def demo_request():
     name = request.form.get('name')
     phone = request.form.get('phone')
     email = request.form.get('email')
-	types = request.form.get('types')
-    send_message(app.config.get('MAIL_REQUEST_TEMPLATE').decode('utf-8') % locals())
+    types = request.form.get('types')
+    # отправляем уведомление о заявке
+    send_message(app.config.get('MAIL_SUBJECT'),
+                 app.config.get('MAIL_RECIPIENTS'),
+                 app.config.get('MAIL_REQUEST_TEMPLATE').decode('utf-8') % locals())
+    # отправляем автоответ на заявку
+    send_message(app.config.get('MAIL_SUBJECT'),
+                 [email],
+                 app.config.get('MAIL_ANSWER'))
+
     return redirect(url_for('index'))
-
-
-def send_message(body):
-    msg = Message(app.config.get('MAIL_SUBJECT'),
-                  recipients=app.config.get('MAIL_RECIPIENTS'),
-                  body=body)
-    app.logger.info(body)
-    mail.send(msg)
 
 
 if __name__ == '__main__':
