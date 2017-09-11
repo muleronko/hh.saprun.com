@@ -61,7 +61,7 @@ def demo_request():
                  app.config.get('MAIL_REQUEST_TEMPLATE').decode('utf-8') % locals())
     # отправляем автоответ на заявку
     send_message(app.config.get('MAIL_SUBJECT'),
-                 (email,),
+                 [email],
                  app.config.get('MAIL_ANSWER'))
 
     return redirect(url_for('index'))
