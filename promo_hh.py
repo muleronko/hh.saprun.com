@@ -58,7 +58,7 @@ def demo_request():
     types = request.form.get('types')
     # отправляем уведомление о заявке
     send_message(subject=app.config.get('MAIL_SUBJECT'),
-                 recipients=[app.config.get('MAIL_RECIPIENT')],
+                 recipients=app.config.get('MAIL_RECIPIENTS'),
                  body=app.config.get('MAIL_REQUEST_TEMPLATE').decode('utf-8') % locals(),
                  sender='promo-hh@foo.com')
     # отправляем автоответ на заявку
